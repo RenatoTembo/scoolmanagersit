@@ -1,0 +1,235 @@
+.header-welcome {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    transition: all .25s ease-in-out;
+    padding: 15px 8px 15px 8px;
+    display: flex;
+    align-items: center;
+    color: var(--color2);
+    font-weight: 600;
+    transition: all 2s ease;
+    box-shadow: var(--box-shadow);
+    background-color: var(--background);
+    z-index: 4;
+}
+
+.header-welcome a {
+    margin-left: 40px;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.asid-lateral-welcome {
+    width: 230px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    transition: all .44s ease-in-out;
+    padding: 50px 5px 0px 0px;
+    display: block;
+    align-items: center;
+    color: var(--color2);
+    font-weight: 600;
+    box-shadow: var(--box-shadow);
+    background-color: var(--background);
+    overflow: hidden;
+    transform: translateX(-230px);
+    z-index: 3;
+}
+
+.asid-lateral-welcome.active {
+    transition: all .44s ease-in-out;
+    transform: translateX(0px);
+}
+
+.home {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    padding-top: 145px;
+    text-align: center;
+    overflow: hidden;
+    height: 100vh;
+    color: var(--white);
+    position: relative;
+}
+
+.home-title {
+    margin: 10px 0 15px;
+    color: white;
+    font-size: 3rem;
+}
+
+.home-text {
+    margin-bottom: 50px;
+    color: var(--color-attention);
+}
+
+.home-content {
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-texto {
+    color: white;
+    font-size: 1.1rem;
+    padding: 7px;
+    text-align: center;
+    background-color: rgba(71, 69, 69, 0.596);
+}
+
+.home-content a {
+    color: var(--white);
+    font-weight: 600;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    border-radius: 5px;
+    max-width: max-content;
+    margin: 0 auto;
+    transition: var(--transition-1);
+    margin-top: 10px;
+    color: white;
+    width: 250px;
+}
+
+.wripper-student,
+.wripper-caracteristicas,
+.wripper-cursos {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(250px, 3fr));
+    position: relative;
+}
+
+.wripper-student div,
+.wripper-caracteristicas div {
+    width: 100%;
+    height: 250px;
+}
+
+.wripper-caracteristicas {
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.wripper-caracteristicas div {
+    height: auto;
+    padding: 15px;
+    margin: 3px;
+    cursor: pointer;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+
+.wripper-caracteristicas div i {
+    font-size: 1.5rem;
+    border-radius: 50%;
+    padding: 10px;
+    background-color: rgba(0, 81, 255, 0.815);
+    color: white;
+}
+
+.wripper-caracteristicas div h3 {
+    padding: 2px;
+    width: 100%;
+    text-align: right;
+    font-size: 1.6rem;
+    transition: all .7s ease-in-out;
+}
+
+.wripper-caracteristicas div p {
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: justify;
+}
+
+.wripper-caracteristicas div:hover {
+    background-color: rgba(0, 81, 255, 0.815);
+    transition: all .7s ease-in-out;
+    border-radius: 1%;
+}
+
+.wripper-student div h3,
+.wripper-student div p {
+    color: white;
+}
+
+.wripper-student div p {
+    text-align: justify;
+}
+
+.wripper-student div img {
+    width: 100%;
+    height: 250px;
+}
+
+.wripper-student>div:nth-child(1),
+.wripper-student>div:nth-child(4) {
+    background-color: rgba(0, 102, 255, 0.856);
+    padding: 10px;
+    text-align: center;
+}
+
+.wripper-cursos {
+    grid-template-columns: repeat(1, minmax(250px, 3fr));
+    width: 100%;
+}
+
+.wripper-cursos{
+    padding: 20px;
+    padding-right: 40px;
+}
+
+/* RESPONSIVITY*/
+
+@media screen and (max-width: 500px) {
+
+    .wripper-student,
+    .wripper-caracteristicas {
+        grid-template-columns: repeat(1, minmax(250px, 3fr));
+        padding: 5px;
+        margin: 0px;
+    }
+
+    .wripper-caracteristicas div {
+        padding: 0px;
+        margin: 0px;
+    }
+
+}
+
+@media screen and (max-width: 390px) {
+    .wrap.image-content {
+        width: 90vmin;
+    }
+}
+
+@media (max-width: 700px) and (min-width: 1110px) {
+    .wripper-caracteristicas {
+        grid-template-columns: repeat(1, minmax(250px, 3fr));
+        padding: 5px;
+        margin: 0px;
+    }
+    .wripper-cursos .wrap{
+        grid-template-columns: repeat(1, minmax(250px, 3fr));
+        padding: 30px;
+        margin: 0px;
+    }
+}
+
+@media (min-width: 1100px) {
+    .wripper-cursos {
+        grid-template-columns: repeat(2, minmax(250px, 3fr));
+        padding: 10px;
+        padding-right: 25px;
+        margin: 0px;
+    }
+}
